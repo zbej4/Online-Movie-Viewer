@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Project_2___Online_Movie_Viewer.Models.MovieProfileTag>
+
+@{
+    ViewBag.Title = "Home Index";
+    var profile = ViewBag.Profile;
+    var count = 0;
+    double totalPrice = 0;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h4 style="color:red;">@ViewBag.Error</h4>
+<p>
+    <a href="/profile/edit/@ViewBag.Profile.Email">Edit Profile</a> | <a href="/profile/delete/@ViewBag.Profile.Email">Delete Profile</a>
+</p>
+<p>
+    @Html.ActionLink("View All Movies", "Index", "Movie")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Movie.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profile.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Views)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    count += 1;
+    totalPrice += item.Movie.Price;
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Movie.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profile.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Views)
+        </td>
+        <td>
+            @Html.ActionLink("Manage Tags", "Index", "Tags", new { /* id=item.PrimaryKey */ }, null) |
+            <a href="/movie/details/@item.MovieId">Details</a> |
+            <a href="/movie/watchAgain/@item.MovieId">Watch Again</a>
+        </td>
+    </tr>
+}
+
+</table>
+
+<hr />
+<div>
+    <h4>Total Number of Movies Viewed: @count</h4>
+    <h4>Total Spent: @totalPrice</h4>
+</div>

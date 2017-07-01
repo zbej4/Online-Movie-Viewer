@@ -1,0 +1,57 @@
+﻿@model Project_2___Online_Movie_Viewer.Models.Movie
+
+@{
+    ViewBag.Title = " Movie Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LengthInMinutes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LengthInMinutes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMDB_Url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMDB_Url)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

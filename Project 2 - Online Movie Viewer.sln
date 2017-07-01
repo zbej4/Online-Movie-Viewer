@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project 2 - Online Movie Viewer", "Project 2 - Online Movie Viewer\Project 2 - Online Movie Viewer.csproj", "{CDBF3F96-6AC2-4CEA-ADF1-5836129E1CEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDBF3F96-6AC2-4CEA-ADF1-5836129E1CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDBF3F96-6AC2-4CEA-ADF1-5836129E1CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDBF3F96-6AC2-4CEA-ADF1-5836129E1CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDBF3F96-6AC2-4CEA-ADF1-5836129E1CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
